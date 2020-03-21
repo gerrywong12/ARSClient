@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8DC"
+    tools:context=".Fragment.ReservationDetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+    <TextView
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="@string/reservation_code"
+        android:textColor="#000000"
+        android:layout_marginTop="14dp"
+        android:id="@+id/reservation_code"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reservation_startDate"
+        app:layout_constraintTop_toBottomOf="@id/reservation_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Friday, 24th January 2020"
+        ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reservation_StartTime"
+            app:layout_constraintTop_toBottomOf="@id/reservation_startDate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="Start = 19:00"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reservation_EndTime"
+            app:layout_constraintTop_toBottomOf="@id/reservation_StartTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="End = 21:00"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reservation_number_of_pax"
+            app:layout_constraintTop_toTopOf="@id/reservation_startDate"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#000000"
+            android:textSize="52sp"
+            android:text="4"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/reservation_EndTime"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:text="pax"
+            ></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

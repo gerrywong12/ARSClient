@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8DC"
+    tools:context=".Fragment.ConfirmMakeReservation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#FFF8DC"
+        tools:context=".Fragment.MakeReservation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="8dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/title_text"
+            app:layout_constraintBottom_toTopOf="@id/tf_bookingTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:maxHeight="150dp"
+            android:maxWidth="150dp"
+            android:src="@drawable/logo"
+            android:adjustViewBounds="true"
+            android:id="@+id/logoImage"
+            ></ImageView>
+        <TextView
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="@string/confirm_make_reservation"
+            android:textColor="#000000"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/title_text"></TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_bookingTime"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/select_start_time"
+            app:hintTextColor="#000000"
+            app:errorEnabled="true"
+            app:boxStrokeColor="#000000"
+            app:boxStrokeWidth="2dp"
+            android:textColorHint="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#000000"
+            android:padding="0dp"
+            android:layout_margin="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:inputType="date"
+                android:enabled="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#228B22"
+            android:text="Select Start Time"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_selectTime"
+            app:layout_constraintTop_toBottomOf="@id/tf_bookingTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            ></Button>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_end_bookingTime"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/select_end_time"
+            app:hintTextColor="#000000"
+            app:errorEnabled="true"
+            app:boxStrokeColor="#000000"
+            app:boxStrokeWidth="2dp"
+            android:textColorHint="#000000"
+            app:layout_constraintTop_toBottomOf="@id/btn_selectTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#000000"
+            android:padding="0dp"
+            android:layout_margin="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:inputType="date"
+                android:enabled="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#228B22"
+            android:text="Select End Time"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_selectEndTime"
+            app:layout_constraintTop_toBottomOf="@id/tf_end_bookingTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            ></Button>
+
+        <Button
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#228B22"
+            android:text="Make Reservation"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_make_reservation"
+            app:layout_constraintTop_toBottomOf="@id/btn_selectEndTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            ></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

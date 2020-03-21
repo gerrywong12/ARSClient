@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SignUp"
+    android:padding="8dp"
+    android:background="@drawable/login_background"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true"
+        android:id="@+id/logoImage"
+        ></ImageView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_signUpUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/loginUsernameText"
+        app:hintTextColor="#000000"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_signUpPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/phoneNo"
+        app:hintTextColor="#000000"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tf_signUpUsername"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textColor="#000000"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_signUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/email"
+        app:hintTextColor="#000000"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tf_signUpPhoneNo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnDatePicker"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tf_signUpBirthDate"
+        app:layout_constraintTop_toBottomOf="@id/tf_signUpEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnDatePicker"
+        android:text="Pick your birth date"
+        android:textColor="#000000"></TextView>
+
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#228B22"
+        app:layout_constraintTop_toTopOf="@id/tf_signUpBirthDate"
+        app:layout_constraintBottom_toBottomOf="@id/tf_signUpBirthDate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tf_signUpBirthDate"
+        android:layout_margin="0dp"
+        android:padding="5dp"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rb_signUpMale"
+        android:orientation="horizontal"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintTop_toBottomOf="@id/tf_signUpBirthDate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/rb_gender"
+        >
+        <RadioButton
+            android:id="@+id/rb_signUpMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#228B22"
+            android:text="@string/male"/>
+        <RadioButton
+            android:id="@+id/rb_signUpFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#228B22"
+
+            android:text="@string/female"/>
+    </RadioGroup>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_signUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/password"
+        app:hintTextColor="#000000"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/rb_gender"
+        app:endIconMode="password_toggle"
+        android:layout_marginTop="8dp"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_signUpConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/confirmPassword"
+        app:hintTextColor="#000000"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tf_signUpPassword"
+        app:endIconMode="password_toggle"
+        android:layout_marginTop="8dp"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        android:textColorHint="#000000"
+        android:textColor="#000000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#228B22"
+        app:layout_constraintTop_toBottomOf="@id/tf_signUpConfirmPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

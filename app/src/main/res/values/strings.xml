@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ARS</string>
+    <string name="loginUsernameText">USERNAME</string>
+    <string name="age">AGE</string>
+    <string name="phoneNo">PHONE NUMBER</string>
+    <string name="birthDate">BIRTH DATE</string>
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="confirmPassword">CONFIRM PASSWORD</string>
+    <string name="password">PASSWORD</string>
+    <string name="email">EMAIL</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="make_reservation">Secure Your Place</string>
+    <string name="confirm_make_reservation">One Step Away</string>
+    <string name="profile">Profile</string>
+    <string name="menu">Menu</string>
+    <string name="reservations">Your Reservations</string>
+    <string name="reservation_code">RS000000 Details</string>
+    <string name="enter_number_of_pax">Enter Number of Pax</string>
+    <string name="number_of_pax_warning">the number of pax can\'t be edited later</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="select_start_time">Start Time</string>
+    <string name="select_end_time">End Time</string>
+
+</resources>
